@@ -1,0 +1,13 @@
+const MongoClient = require('mongodb').MongoClient;
+
+MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
+
+});
+
+mongo doesn't use sequential integer ids
+instead it use uniquely generated _id
+  12 bytes
+  first 4 is timestamp
+  next 3 is computer specific (client or mongo server?)
+  next 2 is process id specific (client or mongo server?) probably server
+  3 is random
